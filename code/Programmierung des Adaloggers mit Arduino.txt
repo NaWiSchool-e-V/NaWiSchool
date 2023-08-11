@@ -1,0 +1,7 @@
+Programmierung des Adaloggers mit Arduino
+Folge der Anleitung durch die Schritte „Arduino IDE Setup“ und „Using with Arduino IDE“ um die IDE vorzubereiten und das erste Programm auf den Adalogger zu spielen. 
+https://learn.adafruit.com/adafruit-feather-m0-adalogger/ 
+Danach die hier liegenden Codes überspielen. 
+
+Bei Problemen gerne unter gerb008701@gmail.com melden. 
+
