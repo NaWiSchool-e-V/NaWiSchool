@@ -1,4 +1,4 @@
-# NaWiSchool
+# ![image003](https://github.com/T-N-S/NaWiSchool/assets/66968256/146b9d94-1547-4fd5-a564-3c854398f0c2)
 
 Welcome to the NaWiSchool Adalogger Project repository! This repository contains the Arduino code and Fritzing diagrams for building and using the Adaloggers developed by the NaWiSchool team. NaWiSchool is a nonprofit organization dedicated to promoting science and technology education among students.
 
