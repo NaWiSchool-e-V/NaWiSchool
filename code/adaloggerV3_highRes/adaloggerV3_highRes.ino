@@ -193,7 +193,7 @@ void setup() {
 
   } else if (activeSensor == MPU6050) {
     logfile = SD.open(filename, FILE_WRITE);
-    logfile.println("Name: AdaloggerV3 low Resolution by Tim Schumann");
+    logfile.println("Name: AdaloggerV3 high Resolution by Tim Schumann");
     logfile.println("#, CPU time in ms, hh:mm:ss(UTC), date, x in m/s^2, y in m/s^2, z in m/s^2, lat, lng, alt, speed, course, distanceToStart, satellites, batteryVoltage");
     if (!logfile) {
 #ifdef ENLOG
@@ -205,7 +205,7 @@ void setup() {
 #ifdef ENLOG
     Serial.print("Writing to: ");
     Serial.println(filename);
-    Serial.println("Name: AdaloggerV3 low Resolution by Tim Schumann");
+    Serial.println("Name: AdaloggerV3 high Resolution by Tim Schumann");
     Serial.println("#, CPU time in ms, hh:mm:ss(UTC), date, x in m/s^2, y in m/s^2, z in m/s^2, lat, lng, alt, speed, course, distanceToStart, satellites, batteryVoltage");
 #endif
     logfile.close();
