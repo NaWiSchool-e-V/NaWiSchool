@@ -131,15 +131,15 @@ void setup() {
   mySet.setLabel("mySet");
 
   PhyphoxBleExperiment::ExportData myData1;
-  myData1.setLabel("temperature");
+  myData1.setLabel("acceleration x");
   myData1.setDatachannel(1);
 
   PhyphoxBleExperiment::ExportData myData2;
-  myData2.setLabel("humidity");
+  myData2.setLabel("acceleration y");
   myData2.setDatachannel(2);
 
   PhyphoxBleExperiment::ExportData myData3;
-  myData3.setLabel("pressure");
+  myData3.setLabel("acceleration z");
   myData3.setDatachannel(3);
 
   //attach to experiment
