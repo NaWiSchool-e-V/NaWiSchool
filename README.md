@@ -39,6 +39,6 @@ This project is licensed under the MIT License. Feel free to use, modify, and di
 
 ## Contact
 
-For any inquiries or feedback, please contact us at [gerb008701@gmail.com](mailto:gerb008701@gmail.com).
+For any inquiries or feedback, please contact us at [tim.schumann@nawischool.de](mailto:tim.schumann@nawischool.de).
 
 Visit our website: [NaWiSchool.de](https://www.nawischool.de/)
