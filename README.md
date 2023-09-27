@@ -21,11 +21,11 @@ To get started with this project, follow these steps:
 2. **Code:** Upload the corresponding Arduino sketch to the Adalogger board. Refer to the [Code](#code) section for details.
 3. **Data Collection:** Power on the Adalogger and start collecting data from the environment.
 
-## Code
+## [Code](code/)
 
 Browse the `code` folder to find the Arduino sketches for the Adalogger project. Each sketch includes comments to guide you through the code and explain its functionality.
 
-## Fritzing Diagrams
+## [Fritzing Diagrams](/fritzing)
 
 The `fritzing` folder contains Fritzing diagrams that provide instructions on how to assemble the Adalogger hardware. These diagrams help you build the Adalogger from scratch, making it easy for students and enthusiasts to recreate the devices.
 
