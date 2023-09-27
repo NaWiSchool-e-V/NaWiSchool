@@ -25,7 +25,7 @@ To get started with this project, follow these steps:
 
 Browse the `code` folder to find the Arduino sketches for the Adalogger project. Each sketch includes comments to guide you through the code and explain its functionality.
 
-## [Fritzing Diagrams](/fritzing)
+## [Fritzing Diagrams](fritzing/)
 
 The `fritzing` folder contains Fritzing diagrams that provide instructions on how to assemble the Adalogger hardware. These diagrams help you build the Adalogger from scratch, making it easy for students and enthusiasts to recreate the devices.
 
