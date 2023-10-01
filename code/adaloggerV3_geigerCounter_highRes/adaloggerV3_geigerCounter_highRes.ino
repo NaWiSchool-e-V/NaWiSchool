@@ -8,7 +8,7 @@
     Date: 2023-09-27
 
     Dependencies:
-    TinyGPS++ - https://github.com/mikalhart/TinyGPSPlus.git
+    TinyGPS+ - https://github.com/mikalhart/TinyGPSPlus.git
     Adafruit_Sensor - https://github.com/adafruit/Adafruit_Sensor
     Adafruit_BME280_Library - https://github.com/adafruit/Adafruit_BME280_Library
     Adafruit_MPU6050 - https://github.com/adafruit/Adafruit_MPU6050 
@@ -162,7 +162,7 @@ void setup() {
   if (activeSensor == BME280) {
     logfile = SD.open(filename, FILE_WRITE);
     logfile.println("AdaloggerV3 high Resolution by Tim Schumann");
-    logfile.println("#, CPU time in ms, hh:mm:ss(UTC), date, temp, press, hum, geigerCounter in cpm, lat, lng, alt, speed, course, distanceToStart, satellites, batteryVoltage");
+    logfile.println("#, CPU time in ms, hh:mm:ss(UTC), date, temp, press, hum, radiation in cpm, lat, lng, alt, speed, course, distanceToStart, satellites, batteryVoltage");
     if (!logfile) {
 #ifdef ENLOG
       Serial.print("Couldnt create ");
@@ -174,7 +174,7 @@ void setup() {
     Serial.print("Writing to: ");
     Serial.println(filename);
     Serial.println("AdaloggerV3 high Resolution by Tim Schumann");
-    Serial.println("#, CPU time in ms, hh:mm:ss(UTC), date, temp, press, hum, geigerCounter in cpm, lat, lng, alt, speed, course, distanceToStart, satellites, batteryVoltage");
+    Serial.println("#, CPU time in ms, hh:mm:ss(UTC), date, temp, press, hum, radiation in cpm, lat, lng, alt, speed, course, distanceToStart, satellites, batteryVoltage");
 #endif
     logfile.close();
 
@@ -200,7 +200,7 @@ void setup() {
   } else if (activeSensor == MPU6050) {
     logfile = SD.open(filename, FILE_WRITE);
     logfile.println("AdaloggerV3 high Resolution by Tim Schumann");
-    logfile.println("#, CPU time in ms, hh:mm:ss(UTC), date, x in m/s^2, y in m/s^2, z in m/s^2, geigerCounter in cpm, lat, lng, alt, speed, course, distanceToStart, satellites, batteryVoltage");
+    logfile.println("#, CPU time in ms, hh:mm:ss(UTC), date, x in m/s^2, y in m/s^2, z in m/s^2, radiation in cpm, lat, lng, alt, speed, course, distanceToStart, satellites, batteryVoltage");
     if (!logfile) {
 #ifdef ENLOG
       Serial.print("Couldnt create ");
@@ -212,7 +212,7 @@ void setup() {
     Serial.print("Writing to: ");
     Serial.println(filename);
     Serial.println("AdaloggerV3 high Resolution by Tim Schumann");
-    Serial.println("#, CPU time in ms, hh:mm:ss(UTC), date, x in m/s^2, y in m/s^2, z in m/s^2, geigerCounter in cpm, lat, lng, alt, speed, course, distanceToStart, satellites, batteryVoltage");
+    Serial.println("#, CPU time in ms, hh:mm:ss(UTC), date, x in m/s^2, y in m/s^2, z in m/s^2, radiation in cpm, lat, lng, alt, speed, course, distanceToStart, satellites, batteryVoltage");
 #endif
     logfile.close();
     // Setup form and find longest label.
