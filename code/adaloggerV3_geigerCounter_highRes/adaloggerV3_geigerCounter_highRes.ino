@@ -75,11 +75,11 @@ uint8_t col1 = 0;  // Last value column.
 uint8_t rows;      // Rows per line.
 
 // Define labels and units for display
-const char* labelBME[] = { " Temp.:", " Hum.:", " Time:", " B.|S.:" };
-const char* unitsBME[] = { "C", "%", " ", " " };
+const char* labelBME[] = { " Temp.:", " CPM:", " Time:", " B.|S.:" };
+const char* unitsBME[] = { "C", " ", " ", " " };
 
-const char* labelMPU[] = { " x:", " y:", " z:", " B.|S.:" };
-const char* unitsMPU[] = { "m/s2", "m/s2", "m/s2", "" };
+const char* labelMPU[] = { " x:", " y:", " CPM:", " B.|S.:" };
+const char* unitsMPU[] = { "m/s2", "m/s2", " ", " " };
 
 // UBX protocol byte arrays for communication with GPS
 uint8_t ClearConfig[] = { 0xB5, 0x62, 0x06, 0x09, 0x0D, 0x00, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0x00, 0x00, 0x01, 0x19, 0x98 };
@@ -353,7 +353,7 @@ void sdWrite() {
     clearValue(0);
     oled.print(bme.readTemperature(), 1);
     clearValue(rows);
-    oled.print(bme.readHumidity(), 1);
+    oled.print(lastCPM);
     clearValue(2 * rows);
     oled.print(gps.time.hour());
     oled.print(":");
@@ -479,7 +479,7 @@ void sdWrite() {
     clearValue(rows);
     oled.print(a.acceleration.y);
     clearValue(2 * rows);
-    oled.print(a.acceleration.z);
+    oled.print(lastCPM);
     clearValue(3 * rows);
     if (displayState)
       oled.print(voltageMapped);
