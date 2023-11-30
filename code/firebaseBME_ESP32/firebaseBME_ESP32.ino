@@ -155,6 +155,7 @@ void initWiFi() {
   WiFiManager wifiManager;
 
   wifiManager.setSaveConfigCallback(saveConfigCallback);
+  wifiManager.setConnectRetries(100);
 
   wifiManager.addParameter(&custom_user_name);
   wifiManager.addParameter(&custom_user_password);
@@ -268,30 +269,13 @@ void setup() {
   // Update database path
   databasePath = "/UsersData/" + uid + "/readings";
 
-  if (Firebase.ready()) {
-    //Get current timestamp
-    timestamp = getTime();
-    Serial.print("time: ");
-    Serial.println(timestamp);
-
-    parentPath = databasePath + "/" + String(timestamp);
-
-    // Set JSON data
-    json.set(tempPath.c_str(), String(bme.readTemperature()));
-    json.set(humPath.c_str(), String(bme.readHumidity()));
-    json.set(presPath.c_str(), String(bme.readPressure() / 100.0F));
-    json.set(timePath, String(timestamp));
-
-    // Print result of setting JSON data
-    Serial.printf("Set json... %s\n", Firebase.RTDB.setJSON(&fbdo, parentPath.c_str(), &json) ? "ok" : fbdo.errorReason().c_str());
-  }
 }
 
 void loop() {
   // Send new readings to database
   if (Firebase.ready() && (millis() - sendDataPrevMillis > timerDelay || sendDataPrevMillis == 0)) {
     sendDataPrevMillis = millis();
-
+& 
     //Get current timestamp
     timestamp = getTime();
     Serial.print("time: ");
