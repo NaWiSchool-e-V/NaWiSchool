@@ -4,8 +4,6 @@
 
 This Arduino sketch is designed to work with a LoRa receiver module. It receives data packets sent via LoRa and prints them to the console. The code is intended to be used in conjunction with a LoRa transmitter to establish communication between two Arduino devices using LoRa technology.
 
-## Author
-
 - **Author:** T. Schumann
 - **Date:** 2024-02-13
 
@@ -17,8 +15,7 @@ This Arduino sketch is designed to work with a LoRa receiver module. It receives
 
 1. Install the LoRa library by following the instructions provided in the [arduino-LoRa](https://github.com/sandeepmistry/arduino-LoRa) repository.
 2. Upload this sketch to your Arduino board with the LoRa receiver module connected.
-3. Ensure that the serial monitor is open with a baud rate of 9600 to view the received data.
-4. Use in conjunction with a LoRa transmitter that sends data packets to this receiver.
+3. Ensure that the serial monitor is open with a baud rate of 115200 to view the received data.
 
 ## Setup
 
@@ -28,7 +25,7 @@ This Arduino sketch is designed to work with a LoRa receiver module. It receives
 
 ## Troubleshooting
 
-- If the serial monitor displays "Starting LoRa failed!" it indicates a problem with initializing the LoRa module. Check the wiring and ensure that the LoRa module is properly connected.
+- If the serial monitor displays "Starting LoRa failed!", it indicates a problem with initializing the LoRa module. Check the wiring and ensure that the LoRa module is properly connected.
 - Ensure that the LoRa transmitter is configured to operate on the same frequency and with compatible settings.
 
 ## License
