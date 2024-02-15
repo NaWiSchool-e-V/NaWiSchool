@@ -15,7 +15,7 @@ This script reads data from an Arduino connected via serial port, parses the dat
    pip install firebase-admin pyserial
    ```
 
-2. Ensure you have a Firebase project set up and obtain the Firebase SDK JSON file. Save it in the same folder and adjust database url. 
+2. Ensure you have a Firebase project set up and obtain the Firebase SDK JSON file.
 
 3. Update the `SERIAL_PORT` variable in the script to match your Arduino's serial port.
 
@@ -38,4 +38,3 @@ The script performs the following tasks:
 - Gracefully handles exceptions, ensuring a stable connection with the Arduino.
 - Manages reconnection attempts in case of connection failures.
 - Catches keyboard interrupts for a clean exit from the script.
-
